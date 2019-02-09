@@ -33,9 +33,9 @@ ul.mainnav {
 	list-style-type: none;
 	overflow: hidden;
 	margin: 0;
-    padding: 0;
+  padding: 0;
 	display: flex;
-    justify-content: space-between;
+  justify-content: space-between;
 }
 ul.mainnav li a:hover:not(.active) { /* applies bg color when nav element which isn't active is hovered over */
 	background-color: #d6d6d6;
@@ -47,8 +47,15 @@ nav li a {
 	color: black;
 	text-decoration: none;
 	align-items: center;
-	
 }
 .active {
 	background-color: red;
+}
+p.slogan {
+	text-align: center;
+	font-size: 35px;
+	color: #7a7a7a;
+}
+#products{
+	display: inline-block;
 }
