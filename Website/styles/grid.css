@@ -6,7 +6,7 @@
 }
 .container > * {
 	grid-column: 1 / span 4;
-	border: 1px solid #000;
+	border: 0px solid #000;
 	padding: 10px;
 }
 .item1 {
@@ -24,4 +24,8 @@
 .item4 {
 	grid-column: 4;
 	grid-row: 5;
+}
+
+.content {
+	grid-column: 1 / span 2;
 }
