@@ -1,7 +1,8 @@
 html {
-	font-family: 'Iceberg'
+	font-family: 'Iceberg';
+	background-color: #f2f2f2;
 }
-.container {
+.wrapper {
 	background-color: #f2f2f2;
 	margin: auto;
 }
@@ -75,13 +76,18 @@ li:last-child {
 	font-size: 12px;
 	font-family: sans-serif;
 }
-
 footer {
 	font-family: sans-serif;
+	max-width: 100% !important;
 }
 .footer1 {
 	background-color: white;
+	border-top: 1px solid black;
+	color: #C5110B;
+	width: 100%;
 }
 .footer2 {
-	background-color: red;
+	background-color: #C5110B;
+	font-size: 12px;
+	padding-bottom: 100px;
 }
