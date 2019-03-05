@@ -34,23 +34,24 @@ footer {
 	display: grid;
 	grid-template-columns: repeat(8, 1fr);
 	grid-gap: 0px;
+	max-width: 960px;
 }
 .footer1 img {
-	grid-column: 2;
+	grid-column: 1;
 	padding-top: 25px;
 	padding-bottom: 25px;
 }
 .fitem1 {
-	grid-column: 3 / span 2;
+	grid-column: 3 / span 3;
 	grid-row: 1;
 }
 .fitem2 {
-	grid-column: 6;
+	grid-column: 7;
 	grid-row: 1;
 }
 .f2item1 {
-	grid-column: 2 / span 3;
+	grid-column: 1 / span 3;
 }
 .f2item2 {
-	grid-column: 6 / span 2;
+	grid-column: 6 / span 3;
 }

@@ -78,7 +78,7 @@ li:last-child {
 }
 footer {
 	font-family: sans-serif;
-	max-width: 100% !important;
+	margin: auto;
 }
 .footer1 {
 	background-color: white;
