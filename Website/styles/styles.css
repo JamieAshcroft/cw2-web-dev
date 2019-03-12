@@ -33,26 +33,27 @@ span.juice {
 ul.mainnav {
 	list-style-type: none;
 	overflow: hidden;
-	margin: 0;
-  padding: 0;
+	padding: 0px 22px;;
 	font-family: sans-serif;
 	font-size: 13px;
+	border-top: 1px solid gray;
+	border-bottom: 1px solid gray;
 }
 ul.mainnav li a:hover:not(.active) { /* applies bg color when nav element which isn't active is hovered over */
 	background-color: #d6d6d6;
 }
 nav * {
 	display: inline;
+	float: left;
 }
 nav li a {
 	color: gray;
 	text-decoration: none;
 	font-weight: bold;
-	padding: 26px 52px;
-	border-top: 1px solid gray;
+	padding: 24px 50px;
 }
 li {
-
+	border-right: 1px solid gray;
 }
 li:last-child {
 	border-right: none;
@@ -101,6 +102,9 @@ form {
 }
 .filler {
 	padding-top: 100px;
+}
+.showcase1 {
+
 }
 /* all styling for the footer */
 footer {
