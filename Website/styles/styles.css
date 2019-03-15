@@ -31,29 +31,32 @@ span.juice {
 }
 /* all styling for mainnav */
 ul.mainnav {
+	margin-top: -30px;
 	list-style-type: none;
 	overflow: hidden;
-	padding: 0px 22px;;
+	padding: 0px 0px;;
 	font-family: sans-serif;
 	font-size: 13px;
-	border-top: 1px solid gray;
-	border-bottom: 1px solid gray;
+	border-top: 1px solid lightgray;
+	border-bottom: 1px solid lightgray;
 }
 ul.mainnav li a:hover:not(.active) { /* applies bg color when nav element which isn't active is hovered over */
 	background-color: #d6d6d6;
 }
 nav * {
-	display: inline;
+	display: block;
 	float: left;
+	text-align: center;
 }
 nav li a {
 	color: gray;
 	text-decoration: none;
 	font-weight: bold;
-	padding: 24px 50px;
+	padding: 24px 53px;
+	width: 49px;
 }
 li {
-	border-right: 1px solid gray;
+	border-right: 1px solid lightgray;
 }
 li:last-child {
 	border-right: none;
@@ -62,6 +65,10 @@ li:last-child {
 	background-color: #C5110B;
 	color: white;
 	font-weight: normal;
+}
+header {
+	margin-top: -34px;
+
 }
 /* Styling for the slogan */
 .slogan {
@@ -105,6 +112,9 @@ form {
 }
 .showcase1 {
 
+}
+.samples img {
+	padding: 8px;
 }
 /* all styling for the footer */
 footer {
