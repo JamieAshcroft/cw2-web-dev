@@ -24,12 +24,12 @@
 // });
 
 $(document).on('ready', () => {
-  const list = $('#reviews');
+  const list = $('.wrapper');
   const promise = $.ajax('https://student.computing.edgehill.ac.uk/~walshd/cis1110api/product-reviews/bikeoil');
-  
+
   /**
    * Creates the rating to show on HTML
-   * @param {number} stars Number of red starts needed
+   * @param {number} stars Number of red stars needed
    */
   const setStars = (stars) => {
     let redStars = '';
@@ -40,10 +40,10 @@ $(document).on('ready', () => {
     if (redStars.length <= 4) {
       const left = 5 - redStars.length;
       for (let i = 0; i < left; i++) {
-        blackStars += '★'; 
+        blackStars += '★';
       }
     }
-    const response = `<span style="color: red;">${redStars}</span>${blackStars}`
+    const response = `<span style="color: #C5110B;">${redStars}</span>${blackStars}`
     return response;
   }
 
@@ -60,43 +60,47 @@ $(document).on('ready', () => {
   }
 
   promise.done(data => {
-    let clicked = false; 
-    
+    let clicked = false;
+
     /**
      * Gets Overall rating and sets it on the HTML
      */
     const overall = overAllRating(data);
     $('#overAllReviews').html(setStars(overall));
-    
+
+    /**
+     * Creates all the elements and places them within the 'list'
+     */
     for (let i = 0; i < 5; i++) {
+
       list.append(`
-        <li>
-          <div class="profile-img">Image</div>
-          <div class="rating">${setStars(data[i].rating)}</div> 
+          <div class="profile-img"><img src="images/reviewicon1.jpg"></div>
+          <div class="rating">${setStars(data[i].rating)}</div>
           <div class="name">${data[i].nickname}</div>
           <div class="review">${data[i].review}</div>
-        </li>
+          <hr>
       `);
     }
-
+    /**
+     * Adds a loop for the button to display extra reviews when button is clicked, also removes them when button is clicked again
+     */
     $('#readAll').click(() => {
       if (!clicked) {
         for (let i = 5; i < data.length; i++) {
           list.append(`
-            <li id="new">
-              <div class="profile-img">Image</div>
-              <div class="rating">${setStars(data[i].rating)}</div> 
-              <div class="name">${data[i].nickname}</div>
-              <div class="review">${data[i].review}</div>
-            </li>
+              <div class="profile-img new"><img src="images/reviewicon1.jpg"></div>
+              <div class="rating new">${setStars(data[i].rating)}</div>
+              <div class="name new">${data[i].nickname}</div>
+              <div class="review new">${data[i].review}</div>
+              <hr class="new">
           `);
         };
         clicked = true;
-        $('#readAll').html('Hide reviews');
+        $('#readAll').html('HIDE REVIEWS');
       } else {
-        $("#reviews li#new").remove();
+        $(".wrapper .new").remove();
         clicked = false;
-        $('#readAll').html('Read All Reviews');
+        $('#readAll').html('READ ALL REVIEWS');
       }
     });
   });

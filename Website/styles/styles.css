@@ -1,19 +1,18 @@
+/* Styling for the entire website. basic BG colour and font */
 html {
 	font-family: 'Iceberg';
 	background-color: #f2f2f2;
 }
-.wrapper {
-	background-color: #f2f2f2;
-	margin: auto;
-}
-/* all styling for logo */
+
+/* All styling for the logo mainly font changes */
 h1.robot{
 	font-family: 'Damion';
 	font-size: 62px;
 	color: #C5110B;
-	letter-spacing: 3px;
+	letter-spacing: 3px; /* Adds a small gap between each letter in the logo */
 	margin-top: 21px;
 }
+/* Span class within the logo div to change the colour of 'Juice' */
 span.juice {
 	font-family: 'Damion';
 	font-size: 62px;
@@ -21,15 +20,17 @@ span.juice {
 	letter-spacing: 3px;
 	margin-top: 21px;
 }
+/* Styling for the p tag used under the main logo */
 #logo p {
 	font-family: 'Ariel';
 	font-size: 13px;
 	color: #333333 ;
-	position: absolute;
+	position: absolute; /* Absolute makes it so you can move the p tag freely around the page without locking */
 	margin-top: -60px;
 	margin-left: 170px;
 }
-/* all styling for mainnav */
+
+/* All styling for the navigation bar */
 ul.mainnav {
 	margin-top: -20px;
 	list-style-type: none;
@@ -40,7 +41,7 @@ ul.mainnav {
 	border-top: 1px solid lightgray;
 	border-bottom: 1px solid lightgray;
 }
-ul.mainnav li a:hover:not(.active) { /* applies bg color when nav element which isn't active is hovered over */
+ul.mainnav li a:hover:not(.active) { /* Applies bg color when nav element which isn't active is hovered over */
 	background-color: #d6d6d6;
 }
 nav * {
@@ -55,33 +56,43 @@ nav li a {
 	padding: 24px 52px;
 	width: 50px;
 }
-li {
+nav li {
 	border-right: 1px solid lightgray;
 }
-li:last-child {
+/* Removes the right border from the last li element */
+nav li:last-child {
 	border-right: none;
 }
+/* Changes the BG colour of the navbar button which is currently active */
 .active {
 	background-color: #C5110B;
 	color: white;
 	font-weight: normal;
 }
+
+/* Adds a small margin to seperate from the navbar */
 header {
 	margin-top: -14px;
+}
 
-}
 /* Styling for the slogan */
-.slogan {
+.slogan p {
 	text-align: center;
-	font-size: 35px;
+	font-size: 30px;
 	color: #7a7a7a;
+	padding: 10px 50px
 }
-/* all styling for products section */
+
+/* All styling for products display section */
 .products p {
 	font-family: sans-serif;
 	font-size: 12px;
 }
-/* all styling for main content, news and poll */
+.products img {
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+/* All styling for the news reports elements */
 .content h4 {
 	font-family: sans-serif;
 	color: #8c8263;
@@ -99,6 +110,8 @@ header {
 	font-style: italic;
 	font-size: 11px !important;
 }
+
+/* All styling for the form and its elements */
 form {
 	background-color: white;
 }
@@ -106,16 +119,79 @@ form {
 	font-family: sans-serif;
 	font-size: 12px;
 }
+
+/* Basic div to add a filler and provide space between two elements */
 .filler {
 	padding-top: 100px;
 }
-.showcase1 {
 
+.showcase0 img {
+	border: 7px solid white;
+}
+.showcase1 img {
+	border: 1px solid red;
+	margin-bottom: 10px;
+}
+.showcase2 p {
+	font-size: 14px;
+	font-weight: bold;
+	color: grey;
+}
+.showcase2 p:last-child {
+	color: black;
+	font-size: 12px;
+	font-weight: normal;
+}
+.showcase2 h2 {
+	color: #C5110B;
+	font-size: 18px;
+}
+.sc2-header {
+	font-size: 24px !important;
+	font-family: 'Iceberg';
+	color: black !important;
+}
+select {
+	width: 115px;
+	text-align: left;
+}
+.buy-button {
+	background-color: #C5110B;
+	color: white;
+	text-decoration: none;
+	padding: 8px 20px;
+	margin: 10px 1px;
+	font-weight: bold;
+	font-size: 16px;
+	text-align: center;
+	width: 280px;
 }
 .samples img {
 	padding: 8px;
 }
-/* all styling for the footer */
+
+.button-review {
+	width: 220px;
+	height: 40px;
+	background-color: #C5110B;
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 16px;
+	position: absolute;
+	left: 47%;
+	border: none;
+	border-radius: 8px;
+}
+.name {
+	font-size: 20px;
+	font-family: 'Calibri';
+}
+hr {
+	margin-bottom: 50px;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+/* All font styling for the footer text elements */
 footer {
 	font-family: sans-serif;
 	margin: auto;
@@ -124,6 +200,7 @@ footer p {
 	font-size: 12px;
 	font-weight: bold;
 }
+
 .footer1 {
 	background-color: white;
 	border-top: 1px solid black;
