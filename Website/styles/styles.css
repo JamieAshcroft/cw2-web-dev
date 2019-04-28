@@ -222,3 +222,27 @@ footer p {
 	text-decoration: underline;
 	color: #C5110B;
 }
+
+.hidden {
+	display: none;
+}
+
+.votes {
+	margin: 0 1%;
+}
+
+.voted {
+	color: #ffffff;
+	padding-right: 1%;
+	text-align: right;
+	margin: 1% 0;
+	width: 0;
+}
+
+.voted.yes {
+	background: green;
+}
+
+.voted.no {
+	background: red;
+}
